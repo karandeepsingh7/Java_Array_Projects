@@ -50,7 +50,6 @@ public class MultiplyTwoMatrices {
 			{
 				for(int k = 0;k<array3[i].length;k++)
 				{
-					//array3[i][j] = 0;
 					array3[i][j] = array3[i][j] + array1[i][k]*array2[k][j];
 				}
 				System.out.print(array3[i][j]);
