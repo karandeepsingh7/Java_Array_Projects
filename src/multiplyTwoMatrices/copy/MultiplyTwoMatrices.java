@@ -18,7 +18,9 @@ public class MultiplyTwoMatrices {
 		array1[2][1] = 3;
 		array1[2][2] = 5;
 		
-		int array2[][] = {{1,5,2},{6,8,4},{3,9,7}};
+		int array2[][] = {{1,0,0},{0,1,0},{0,0,1}};
+		
+		int array3[][] = new int[3][3];
 		
 		for (int i = 0;i<array1.length ; i++)
 		{
@@ -42,13 +44,15 @@ public class MultiplyTwoMatrices {
 		
 		System.out.println();
 		
-		int array3[][] = new int[3][3];
-		
 		for (int i = 0;i<array3.length ; i++)
 		{
 			for(int j = 0;j<array3[i].length;j++)
 			{
-				array3[i][j] = array1[i][j] * array2[i][j];
+				for(int k = 0;k<array3[i].length;k++)
+				{
+					//array3[i][j] = 0;
+					array3[i][j] = array3[i][j] + array1[i][k]*array2[k][j];
+				}
 				System.out.print(array3[i][j]);
 			}
 			System.out.println();
